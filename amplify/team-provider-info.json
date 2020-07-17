@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-chatawsreact-dev-94029-authRole",
+            "UnauthRoleArn": "arn:aws:iam::623282595283:role/amplify-chatawsreact-dev-94029-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::623282595283:role/amplify-chatawsreact-dev-94029-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplify-chatawsreact-dev-94029-deployment",
+            "UnauthRoleName": "amplify-chatawsreact-dev-94029-unauthRole",
+            "StackName": "amplify-chatawsreact-dev-94029",
+            "StackId": "arn:aws:cloudformation:eu-central-1:623282595283:stack/amplify-chatawsreact-dev-94029/cca015a0-c800-11ea-b6f4-0ab3055dd4ce",
+            "AmplifyAppId": "d1cc28jculb99s"
+        }
+    }
+}

@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { API, graphqlOperation } from "aws-amplify";
+import { listMessages } from "./graphql/queries";
 
 function App() {
+  const [messages, setMessages] = useState([]);
+  useEffect(() => {
+    async function fetchBlogs() {
+      try {
+        const response = await API.graphql(graphqlOperation(listMessages));
+        console.log(response);
+      } catch (err) {
+        console.log("error fetching messages", err);
+      }
+    }
+
+    fetchBlogs();
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>messages</div>
+      <div></div>
     </div>
   );
 }
